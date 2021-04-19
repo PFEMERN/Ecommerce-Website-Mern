@@ -17,11 +17,10 @@ const Home = () => {
              <div>
                 <Slider/>
                  <div className="cards">
-                     <Link to = '/shop/?cg=Women'><Cardscg title='Women'/></Link>
-
-                     <Link to = '/shop/?cg=Men'><Cardscg title='Men'/></Link>
-                     <Link to = '/shop/'><Cardscg title='Accessoires'/></Link>                 
-                     </div>
+                         <Cardscg title='Women'/>
+                         <Cardscg title='Men'/>
+                         <Cardscg title='Accessoires'/>                
+                 </div>
                 <CgDiv/>
                 <ProductsC/>
         </div>
