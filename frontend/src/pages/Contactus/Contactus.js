@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Image } from "@chakra-ui/react"
+import { Helmet } from 'react-helmet';
+
 import cover from './cover.jpg'
 import { Input,InputGroup, InputLeftElement, Textarea,Button  } from "@chakra-ui/react"
 import {BsEnvelope, GiPositionMarker, HiOutlinePhone} from 'react-icons/all'
@@ -9,10 +11,14 @@ const Contactus = () => {
     const [body, setbody] = useState('')
 
     const handlesubmit = () =>{
-        window.open(`mailto:${email}?subject=Sample&body=${body}`)
+        window.open(`mailto:abdessamadbouthjoul@gmail.com?subject=Sample&body=${body}`)
     }
     return (
+
         <div className="contactUs">
+            <Helmet>
+                <title>Contact</title>
+            </Helmet>
         <div className="headerContact">
             <Image className="imageContact" src='https://i.imgur.com/7rwaigw.jpg' alt="contactImage" objectFit="cover"/>
             <div className="text">

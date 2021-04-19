@@ -2,6 +2,8 @@ import React,{useEffect} from 'react'
 import { listOrders} from '../../actions/orderActions';
 import { useDispatch, useSelector } from 'react-redux';
 import HashLoader from "react-spinners/HashLoader";
+import { Helmet } from 'react-helmet';
+
 
 import {
     Button, Input, Table,  Thead,
@@ -33,6 +35,9 @@ const Orders = ({history}) => {
 
     return (
         <div className = 'Users'>
+            <Helmet>
+                <title>Orders</title>
+            </Helmet>
         <h1 className = 'titlepanel'> Orders :</h1>
         {loading ?  <div className='loading'>
                      <HashLoader   color={"#1e1e2c"}  loading={loading} size={40} />

@@ -16,6 +16,7 @@ import {
 import { Link } from 'react-router-dom';
 import { AiFillDelete, AiOutlineEdit } from 'react-icons/ai';
 import { CgAdd } from 'react-icons/cg';
+import { Helmet } from 'react-helmet';
 
 const Products = ({history,match}) => {
     const dispatch = useDispatch()
@@ -44,7 +45,6 @@ const Products = ({history,match}) => {
 
         }
     },[dispatch,history,userInfo,successDelete,successCreate,createdproduct])
-
     const deletehandler = (id) =>{
         if(window.confirm('Are You Sure?')){
             dispatch(DeleteProduct(id))
@@ -58,6 +58,9 @@ const Products = ({history,match}) => {
     return (
 
         <div className = 'Users'>
+            <Helmet>
+                <title>products</title>
+            </Helmet>
         <h1 className = 'titlepanel'> Products :</h1>
         {loading || loadingDelete || loadingCreate ?  <div className='loading'>
                      <HashLoader   color={"#1e1e2c"}  loading={loading || loadingDelete || loadingCreate} size={40} />

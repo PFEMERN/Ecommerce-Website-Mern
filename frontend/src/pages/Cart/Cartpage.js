@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect,useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { useDispatch,useSelector } from 'react-redux';
 import { addToCart } from '../../actions/cartActions';
 import Empty from '../../components/Empty';
@@ -24,6 +25,9 @@ const Cartpage = ({match,location,history}) => {
 
     return (
         <>
+        <Helmet>
+            <title>Cart</title>
+        </Helmet>
         {cartItems.length === 0 ? 
         <Empty />
         :

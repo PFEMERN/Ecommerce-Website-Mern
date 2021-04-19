@@ -9,6 +9,8 @@ import './Edituser.css'
 import { Input, InputGroup, InputRightElement } from '@chakra-ui/input'
 import { Checkbox } from '@chakra-ui/checkbox'
 import {  USER_UPDATE_RESET } from '../../constants/userConstants';
+import { Helmet } from 'react-helmet';
+
 
 const Edituser = ({match,history}) => {
     const userId = match.params.id
@@ -74,6 +76,9 @@ const Edituser = ({match,history}) => {
 
     return (
         <div className = 'Edituser'>
+          <Helmet>
+            <title>Edit User</title>
+          </Helmet>
                {error || errorUpdate && <h4>{error || errorUpdate}</h4>}
                {successUpdate && <h4>Profile Updated</h4>}
                {loading || loadingUpdate ? 

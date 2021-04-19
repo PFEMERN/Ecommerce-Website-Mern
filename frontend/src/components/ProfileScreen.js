@@ -5,6 +5,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import avatarRegister from './img/avatarRegister.svg'
 import addUs from './img/new.svg'
 import wave from './img/wavev.png'
+import { Helmet } from 'react-helmet';
 import {getUserDetails, updateUserProfile} from '../actions/userActions'
 import {listMyOrders } from '../actions/orderActions'
 import { IoIosArrowDown } from 'react-icons/all';
@@ -119,6 +120,9 @@ const ProfileScreen = ({location, history}) => {
 
     return (
     <div className="registerSc">
+      <Helmet>
+        <title>Profile</title>
+      </Helmet>
       <Image className="wave" src={wave}/>
       <div className="containera">
               

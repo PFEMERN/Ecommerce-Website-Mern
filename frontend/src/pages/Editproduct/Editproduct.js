@@ -4,9 +4,10 @@ import {useDispatch, useSelector} from 'react-redux'
 import {listProductDetails,UpdateProduct} from '../../actions/productActions'
 import HashLoader from "react-spinners/HashLoader";
 import { Input, InputGroup, } from '@chakra-ui/input'
+import { Helmet } from 'react-helmet';
+
 import {Box, Checkbox, Stack, Textarea, VStack} from '@chakra-ui/react'
 import { PRODUCT_UPDATE_RESET } from '../../constants/productConstants';
-import { array } from 'prop-types';
 import './Editproduct.css'
 const Editproduct = ({match,history}) => {
     const productId = match.params.id
@@ -166,6 +167,9 @@ const Editproduct = ({match,history}) => {
 
     return (
         <div className = 'Edituser'>
+            <Helmet>
+                <title>Edit Product</title>
+            </Helmet>
                {error && <h4>{error}</h4>}
                {/* {successUpdate && <h4>Profile Updated</h4>} */}
                {loading || lodingUpdate || uploading ? 

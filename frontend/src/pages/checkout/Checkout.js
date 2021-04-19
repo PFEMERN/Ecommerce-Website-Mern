@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet';
 import { Input, Stack, Select, Image, Link } from "@chakra-ui/react"
 import {RiShoppingCart2Line} from "react-icons/all"
 import './checkout.css'
@@ -29,6 +30,9 @@ const Checkout = ({history}) => {
     }
     return (
         <div>
+            <Helmet>
+                <title>Checkout</title>
+            </Helmet>
 
             <div className="limit-check">
                 

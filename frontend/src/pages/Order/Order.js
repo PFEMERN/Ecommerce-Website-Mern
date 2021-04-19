@@ -2,6 +2,8 @@ import React, { useState,useEffect } from 'react'
 import axios from "axios";
 import { PayPalButton } from 'react-paypal-button-v2';
 import {Link} from 'react-router-dom'
+import { Helmet } from 'react-helmet';
+
 import {useDispatch, useSelector} from 'react-redux'
 import { IoMdDoneAll } from 'react-icons/all';
 import HashLoader from "react-spinners/HashLoader";
@@ -75,6 +77,9 @@ const Order = ({match,history}) => {
                      </div> : error ? <h1>{error}</h1> :
     (
         <div className="placeorder">
+            <Helmet>
+                <title>ORDER</title>
+            </Helmet>
             <div className="informations-placeorder">
                 <div className="shipping-placeorder">
                     <h2>Shipping</h2>

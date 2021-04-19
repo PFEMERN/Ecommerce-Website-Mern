@@ -13,6 +13,8 @@ import {
     Stack,
     Box,
   } from "@chakra-ui/react"
+  import { Helmet } from 'react-helmet';
+
 import { Link } from 'react-router-dom';
 import { AiFillDelete, AiOutlineEdit } from 'react-icons/ai';
 
@@ -41,6 +43,9 @@ const Users = ({history}) => {
     }
     return (
         <div className = 'Users'>
+            <Helmet>
+                <title>Users</title>
+            </Helmet>
         <h1 className = 'titlepanel'> Users :</h1>
         {loading ?  <div className='loading'>
                      <HashLoader   color={"#1e1e2c"}  loading={loading} size={40} />

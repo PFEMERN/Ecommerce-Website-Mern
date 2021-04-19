@@ -1,6 +1,8 @@
 import React, {useEffect,useState,useRef} from 'react'
 import Rating from '../../components/Rating'
 import {useDispatch, useSelector } from 'react-redux'
+import { Helmet } from 'react-helmet';
+
 import {listProductDetails,createproductReview} from '../../actions/productActions'
 import {IoLogoFacebook,AiFillTwitterCircle,AiFillInstagram,AiFillShop,MdDoNotDisturb}  from "react-icons/all"
 import { Image,Select,Button, FormControl, FormLabel, Textarea } from "@chakra-ui/react"
@@ -47,7 +49,7 @@ useEffect(()=>{
     alert('Review Submitted!')
     setrating(0)
     setcomment('')
-    dispatch({type : PRODUCT_CREATE_RESET})
+    dispatch({type : PRODUCT_CREATE_REVIEW_RESET})
 
   }
   dispatch(listProductDetails(match.params.id))
@@ -69,10 +71,15 @@ const submithanlder = () =>{
     history.push(`/cart/${match.params.id}?qty=${qty}`)
   }
     return (
+      <>
+      <Helmet>
+      <title>{product.name}</title>
+      </Helmet>
         <div className = 'productpage'>
           {loading ?  <div className='loading-product'>
                           <HashLoader   color={"#1e1e2c"}  loading={loading} size={50} />
                      </div>  : error ?  <h2>{error} </h2>  : 
+
      <div className = "card-wrapper">
       <div className = "card">
         <div className = "product-imgs">
@@ -231,6 +238,8 @@ const submithanlder = () =>{
         </div>
       </div>
         </div>
+        </>
+
     )
     
 }

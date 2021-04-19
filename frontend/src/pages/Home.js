@@ -3,11 +3,16 @@ import Slider from '../components/Slider'
 import Cardscg from '../components/Cardscg'
 import CgDiv from '../components/CgDiv'
 import ProductsC from '../components/ProductsC'
+import { Helmet } from 'react-helmet';
+
 
 const Home = () => {
  
     return (
         <>
+        <Helmet>
+            <title>EAST CLOTHING</title>
+        </Helmet>
              <div>
                 <Slider/>
                  <div className="cards">

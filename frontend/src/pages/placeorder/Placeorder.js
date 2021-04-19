@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
 import { CreateOrder } from "../../actions/orderActions";
+import { Helmet } from 'react-helmet';
+
 import './Placeorder.css'
 const Placeorder = ({history}) => {
     const dispatch = useDispatch();
@@ -41,6 +43,9 @@ const Placeorder = ({history}) => {
     }, [history,success])
     return (
         <div className="placeorder">
+            <Helmet>
+                <title>Placeorder</title>
+            </Helmet>
             <div className="informations-placeorder">
                 <div className="shipping-placeorder">
                     <h2>Shipping</h2>
