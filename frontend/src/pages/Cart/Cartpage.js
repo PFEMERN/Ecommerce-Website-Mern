@@ -6,9 +6,6 @@ import Empty from '../../components/Empty';
 import Productoncart from '../../components/Productoncart';
 import './cartcss.css'
 const Cartpage = ({match,location,history}) => {
-    const [totalqty, settotalqty] = useState(0)
-
-    const [total, settotal] = useState(0)
     const {id} = match.params;
     const qty = location.search ? Number(location.search.split('=')[1]) : 1
     const dispatch = useDispatch();
@@ -18,8 +15,6 @@ const Cartpage = ({match,location,history}) => {
     useEffect(()=>{
 
         if(id){
-            settotalqty(prevtotalqty=> prevtotalqty +total)
-
             dispatch(addToCart(id,qty))}
     },[dispatch,id,qty])
 
