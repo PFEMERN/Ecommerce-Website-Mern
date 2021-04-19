@@ -275,16 +275,16 @@ nav {
 /*background Images */
 
 .slide:first-child {
-  background: url("./product3.jpeg") no-repeat center top/cover;
+  background: url("https://i.imgur.com/jJYOdBg.jpg") no-repeat center top/cover;
 }
 .slide:nth-child(2) {
-  background: url("./product1.jpeg") no-repeat center top/cover;
+  background: url("https://i.imgur.com/7rwaigw.jpg") no-repeat center top/cover;
 }
 .slide:nth-child(3) {
-  background: url("./product2.jpeg") no-repeat center top/cover;
+  background: url("https://i.imgur.com/3Obf6Tt.jpg") no-repeat center top/cover;
 }
 .slide:nth-child(4) {
-  background: url("./product4.jpeg") no-repeat center top/cover;
+  background: url("https://i.imgur.com/laeEnPm.jpg") no-repeat center top/cover;
 }
 /*/////////////Categories Cards ///////////////*/
 .cards {
@@ -379,10 +379,10 @@ nav {
   right: 0;
 }
 .cardscg:first-child {
-  background: url("./img1.jpg") no-repeat center top/cover;
+  background: url("https://i.imgur.com/roN4Tqt.jpg") no-repeat center top/cover;
 }
 .cardscg:nth-child(2) {
-  background: url("./img2.jpg") no-repeat center top/cover;
+  background: url("https://i.imgur.com/ugsxgsY.jpg") no-repeat center top/cover;
 }
 .cardscg:nth-child(3) {
   background: url("./img1.jpg") no-repeat center top/cover;
