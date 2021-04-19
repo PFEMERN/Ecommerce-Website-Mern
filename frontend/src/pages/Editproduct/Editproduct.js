@@ -33,7 +33,6 @@ const Editproduct = ({match,history}) => {
     const [Mselected,setMselected] = useState(false)
     const [Lselected,setLselected] = useState(false)
     const [XLselected,setXLselected] = useState(false)
-    const [uploading,setuploading] = useState(false)
 
 
 
@@ -151,9 +150,9 @@ const Editproduct = ({match,history}) => {
             </Helmet>
                {error && <h4>{error}</h4>}
                {/* {successUpdate && <h4>Profile Updated</h4>} */}
-               {loading || lodingUpdate || uploading ? 
+               {loading || lodingUpdate ? 
                         <div className='loading'>
-                            <HashLoader   color={"#1e1e2c"}  loading={lodingUpdate || uploading} size={40} />
+                            <HashLoader   color={"#1e1e2c"}  loading={lodingUpdate} size={40} />
                         </div>
                 
                 : errorUpdate ? <h4>{errorUpdate}</h4> :
