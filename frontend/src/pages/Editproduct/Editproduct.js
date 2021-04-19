@@ -102,7 +102,6 @@ const Editproduct = ({match,history}) => {
         Images.push(Url3)
 
 
-        console.log(sizes)
         e.preventDefault()
         dispatch(UpdateProduct({
             _id: productId,
@@ -130,27 +129,7 @@ const Editproduct = ({match,history}) => {
 
         }
     }
-    const uploadfilehandler = async(e)=>{
-        const files = e.target.files
-        const Formdata = new FormData()
-        Formdata.append('images',files)
-        setuploading(true)
-        try {
-            const config = {
-                headers : {
-                    'Content-Type': 'multipart/form-data'
-                }
-                
-            }
-            const {data} = await axios.post('/api/uploads',FormData,config)
-            setImages(data)
-            setuploading(false)
-        } catch (error) {
-            console.log(error)
-            setuploading(false)
-            
-        }
-    }
+    
     const checkboxhandlercg = (D) =>{
         
             let index = category.indexOf(D)
