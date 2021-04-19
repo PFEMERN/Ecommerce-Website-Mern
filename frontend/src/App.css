@@ -379,10 +379,10 @@ nav {
   right: 0;
 }
 .cardscg:first-child {
-  background: url("https://i.imgur.com/roN4Tqt.jpg") no-repeat center top/cover;
+  background: url("https://i.imgur.com/ugsxgsY.jpg") no-repeat center top/cover;
 }
 .cardscg:nth-child(2) {
-  background: url("https://i.imgur.com/ugsxgsY.jpg") no-repeat center top/cover;
+  background: url("https://i.imgur.com/roN4Tqt.jpg") no-repeat center top/cover;
 }
 .cardscg:nth-child(3) {
   background: url("./img1.jpg") no-repeat center top/cover;
