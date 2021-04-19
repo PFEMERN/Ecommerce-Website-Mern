@@ -6,7 +6,7 @@ const Cardscg = ({title}) => {
 
         <div className="cardscg">
             <h1>{title}</h1>
-            <Link to ={`/Shop/?cg= ${title}`} className="ShopNowcg">Shop Now</Link>
+            <Link to ={`/Shop/?cg=${title}`} className="ShopNowcg">Shop Now</Link>
         </div>
     )
 }
